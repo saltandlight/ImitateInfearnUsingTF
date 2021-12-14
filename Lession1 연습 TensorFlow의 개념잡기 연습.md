@@ -74,8 +74,6 @@
 
 - TensorFlow에서 변수 값 바꾸기
 
-  - 그래프 미리 만들고 실행 단계에서 값 주려고 함
-
   - ```python
     import tensorflow as tf
     
