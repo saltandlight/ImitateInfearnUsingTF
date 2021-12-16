@@ -144,3 +144,15 @@ STEP = 2000, cost 함수값 = 0.15400435030460358
 
 ### logits을 사용하는 Softmax Cross-Entropy 함수
 
+- `tf.reduce_mean(-tf.reduce_sum(Y * tf.log(hypothesis), axis=1))` <- 이 식이 복잡해서 Tensorflow에서 `tf.nn.softmax_cross_entropy_with_logits()` 함수 제공
+- 입력값: 
+  - logits
+  - one-hot 인코딩된 Y값
+
+- ```python
+  cost_i = tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=Y_one__hot)
+  cost = tf.reduce_mean(cost_i)
+  ```
+
+### softmax_ cross_entropy_with_logits 함수를 사용하는 모델
+
